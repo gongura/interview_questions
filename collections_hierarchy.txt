@@ -31,6 +31,37 @@ String str = "I am am learning java java";
 					      update existing one
 						  insertion order not preserved
 						      fail fast                                                                                           fail safe
+							  
+							  
+							  
+							  
+							  
+							  
+
+
+
+
+Differences between comparable and comparator
+==============================================
+
+                   comparable                                                               comparator
+				   -----------                                                              -----------
+		     java.lang package                                                           java.util package
+		single sorting sequence                                                          multiple sorting sequence
+		effects the original class                                                      won't effects the original class
+		     compareTo()                                                                         compare()
+			 Collections.sort(List)                                                      Collections.sort(List,Comparator)
+			 
+			 
+			 
+			 
+primitive data types:- 
+
+
+Non-Primitive Data types:-
+
+Class, object, array, string, and interface are called non-primitive data types in Java. 
+These data types are not predefined in Java. They are created by programmers.
 						  
 						  
 						  
