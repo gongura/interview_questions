@@ -1,0 +1,40 @@
+
+
+String str = "I am am learning java java";
+
+    [i, am, am, learning, java, java]
+	
+	how to delete element from array
+	
+	
+	Arrays practical senarios
+	==========================
+	
+	array sorting(asending and desending);
+	array searching;
+	duplicate elements; strings and numbers;
+	second hieghest element
+	
+	
+	
+	HashMap can be syncronized using Collections.syncronizedMap this is almost equal to HashTable
+	
+	
+	HashTable,                  HashMap                                       TreeMap                                ConcurrentHashMap
+	syncronized               nonSyncronised                                  Tree structured implementation           syncronized
+	Thread Safe              not Thread Safe                                   TreeMap does not allow null keys         thread safe and multi 
+	                                                                           but can have multiple null values.    threaded concurrent environment
+	Low Performance          High Performance
+	JDK 1.0                     JDK 1.2                                                                                    JDK 1.5
+	                      can insert one null as key                                                              it won't allow null as key or value
+					     if you insert more, it will
+					      update existing one
+						  insertion order not preserved
+						      fail fast                                                                                           fail safe
+						  
+						  
+						  
+						  
+	
+	
+	
