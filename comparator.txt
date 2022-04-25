@@ -1,0 +1,102 @@
+Apple.java
+==================
+package comex;
+
+public class Apple {
+	private int id;
+	private String name;
+	private String color;
+	
+	Apple(int id,String name, String color) {
+		this.id = id;
+		this.name = name;
+		this.color = color;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	@Override
+	public String toString() {
+		return "Apple [id=" + id + ", name=" + name + ", color=" + color + "]";
+	}
+
+}
+--------------------------------------------------------------------------------------------
+Main.java
+-----------------------------------
+package comex;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+class Sortbyid implements Comparator<Apple> {
+	public int compare(Apple a, Apple b) {
+		return a.getId() - b.getId();
+	}
+}
+class Sortbyname implements Comparator<Apple> {
+	public int compare(Apple a, Apple b) {
+		return a.getName().compareTo(b.getName());
+	}
+}
+class Sortbycolor implements Comparator<Apple> {
+	public int compare(Apple a, Apple b) {
+		return a.getColor().compareTo(b.getColor());
+	}
+}
+public class Main  {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Apple> ap = new ArrayList<>();
+		ap.add(new Apple(1,"bgl","red"));
+		ap.add(new Apple(2,"kmm","green"));
+		ap.add(new Apple(12,"bkl","orange"));
+		ap.add(new Apple(121,"hyd","orange"));
+		ap.add(new Apple(127,"delhi","white"));
+		ap.add(new Apple(123,"pune","black"));
+		ap.add(new Apple(129,"maynmar","pink"));
+		ap.add(new Apple(120,"calcutta","yellow"));
+		
+		Collections.sort(ap,new Sortbyid());
+		for(int i=0; i<ap.size(); i++) {
+           System.out.println(ap.get(i));
+		}
+		System.out.println("----------------------------------------");
+		
+        Collections.sort(ap, new Sortbyname());
+    	for(int i=0; i<ap.size(); i++) {
+            System.out.println(ap.get(i));
+ 		}
+    	System.out.println("----------------------------------------");
+    	Collections.sort(ap,new Sortbycolor());
+    	for(int i=0; i<ap.size(); i++) {
+            System.out.println(ap.get(i));
+ 		}
+		
+	}
+
+}
