@@ -100,3 +100,47 @@ public class Main  {
 	}
 
 }
+
+In One Class
+============
+
+
+package comex;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+
+public class ComparatorTest  {
+	
+
+
+
+	public static void main(String[] args) {
+		
+		ArrayList<Apple> ap = new ArrayList<>();
+		ap.add(new Apple(1,"bgl","red"));
+		ap.add(new Apple(2,"kmm","green"));
+		ap.add(new Apple(12,"bkl","orange"));
+		ap.add(new Apple(121,"hyd","orange"));
+		ap.add(new Apple(127,"delhi","white"));
+		ap.add(new Apple(123,"pune","black"));
+		ap.add(new Apple(129,"maynmar","pink"));
+		ap.add(new Apple(120,"calcutta","yellow"));
+		
+	Comparator<Apple> cp = (Apple a1, Apple a2) -> a1.getColor().compareTo(a2.getColor());
+	----------------------------------------------------------------------------------------	
+//		Comparator<Apple> cp = new Comparator<Apple>() {
+//			public int compare(Apple a, Apple b) {
+//				return a.getName().compareTo(b.getName());
+//			}
+//		};
+-------------------------------------------------------------------------------------------------
+	Collections.sort(ap, cp);
+  System.out.println(ap);
+	
+		
+	}
+
+}
